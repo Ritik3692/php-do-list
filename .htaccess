@@ -1,0 +1,14 @@
+
+#RewriteEngine On
+# RewriteBase /office-practices/to_do_list/
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [L]
+
+RewriteEngine On
+RewriteBase /office-practices/to_do_list/
+
+# If the request is not a directory and not a file, add .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [L]
