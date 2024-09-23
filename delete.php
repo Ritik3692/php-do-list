@@ -9,9 +9,7 @@ if (isset($_GET['id'])) {
     $stmt->execute();
     $stmt->close();
     $stmt = $conn->prepare("SELECT * FROM `tasks` WHERE 1") ;
-
 }
-
     header("Location: index.php?showList=1&toggleView=");
 ?>
 
